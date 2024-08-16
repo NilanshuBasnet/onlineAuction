@@ -14,7 +14,6 @@ body {
     width: 100%; /* Ensure the container takes full width up to max-width */
     padding: 20px; /* Add padding for better appearance */
     background-color: white; /* Set background color */
-    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
     border-radius: 8px; /* Optional: add rounded corners */
 }
@@ -68,4 +67,3 @@ body {
     text-decoration: underline;
 	color: #4b5563;
 }
-  

@@ -17,10 +17,10 @@ foreach ($xml->item as $item) {
     } elseif ($currentDate >= $endDate) {
         if ((string)$item->status === 'in_progress') {
             // Update status to 'time expired' if auction duration has passed and it's still 'in_progress'
-            $item->status = 'time expired';
+            $item->status = 'in_progress';
             $xml->asXML($xmlFile);  // Save the XML file with the updated status
         }
-        $status = 'Time expired';
+        $status = 'Processing';
         $timeLeft = 'Auction Ended';
     } else {
         $status = 'In progress';
@@ -29,7 +29,7 @@ foreach ($xml->item as $item) {
         $timeLeft = $interval->format('%d days %h hours %i minutes');
     }
 
-    $output .= '<div>';
+    $output .= '<div class="itemsList">';
     $output .= '<p>Item ID: ' . $item->itemID . '</p>';
     $output .= '<p>Name: ' . $item->itemName . '</p>';
     $output .= '<p>Category: ' . $item->category . '</p>';
@@ -41,8 +41,8 @@ foreach ($xml->item as $item) {
 
     // Show buttons only if the auction is still 'In progress'
     if ($status === 'In progress') {
-        $output .= '<button onclick="placeBid(\'' . $item->itemID . '\')">Place Bid</button>';
-        $output .= '<button onclick="buyItNow(\'' . $item->itemID . '\')">Buy It Now</button>';
+        $output .= '<button class="action-button" id="placeBid" onclick="placeBid(\'' . $item->itemID . '\')">Place Bid</button>';
+        $output .= '<button class="action-button" id="buyNow" onclick="buyItNow(\'' . $item->itemID . '\')">Buy It Now</button>';
     }
 
     $output .= '</div><hr>';

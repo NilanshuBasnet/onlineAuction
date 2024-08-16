@@ -1,0 +1,165 @@
+/* General body styling */
+body {
+    font-family: Noto Sans, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Styling for the image column */
+.image-column img {
+    height: 50px;
+    width: auto;
+}
+
+/* Styling for the links column */
+.links-column {
+    display: flex;
+    gap: 15px;
+}
+
+.links-column a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.links-column a:hover {
+    background-color: #575757;
+}
+
+
+.menu{
+    border:none;
+    padding: 10px 20px;
+    border-radius:5px;
+    background-color: #2d3748;;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .menu:focus{
+    outline:none;
+  }
+
+  .logout-button {
+    float: right;
+    background-color: #ba3030;
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px; /* Padding (top and bottom) */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block element to take full width */
+    font-size: 16px; /* Font size */
+    margin: 20px 0; /* Margin (top and bottom) */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.logout-button:hover {
+    background-color: #d62121; 
+}
+
+.itemsList {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.action-button {
+    background-color: #2d3748;
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px; /* Padding (top and bottom) */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    margin: 20px 0; /* Margin (top and bottom) */
+    margin-right: 10px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.action-button:hover {
+    background-color: #4a5568; 
+}
+
+#placeBid {
+    background-color: #FF7F11;
+}
+#buyNow {
+    background-color: #FF3F00;
+}
+#placeBid:hover, #buyNow:hover {
+    background-color: #292F36; 
+}
+
+
+.listing-container {
+    max-width: 30%; /* Set a max-width to 30% of the page */
+    width: 100%; /* Ensure the container takes full width up to max-width */
+    padding: 20px; /* Add padding for better appearance */
+    background-color: white; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.input {
+	width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db; /* Border */
+	height: 40px;
+	padding: 0.75rem 1rem;
+	box-sizing: border-box;
+}
+
+.errormsg{
+	font-weight: bold;
+	color: red;
+	font-style: italic;
+}
+
+.successmsg{
+	font-weight: bold;
+	color: green;
+	font-style: italic;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+.searchBox {
+	width: 30%;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db; /* Border */
+	height: 40px;
+	padding: 0.75rem 1rem;
+	box-sizing: border-box;
+}

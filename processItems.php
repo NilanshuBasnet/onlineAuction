@@ -1,6 +1,19 @@
 <?php
 session_start();
 
+// Check if the user is logged in and has an admin type
+if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
+    // Include the access denied page
+    include('accessDenied.html');
+    
+    // Clear all session variables
+    session_unset();
+
+    // Destroy the session
+    session_destroy();
+    exit(); // Stop further execution of the script
+}
+
 $xmlFile = 'auction.xml';
 $xml = simplexml_load_file($xmlFile);
 

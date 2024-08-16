@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Bids</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .error {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <h2>My Bids</h2>
-
-    <?php
+<?php
     session_start();
 
     // Check if the user is logged in
@@ -32,6 +6,44 @@
         echo "<p class='error'>You must be logged in to view your bids.</p>";
         exit();
     }
+    
+    // Check if the customer type is admin
+    $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Bids</title>
+    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="image-column">
+            <img src="shoponline.png" alt="ShopOnline Logo">
+        </div>
+        <div class="links-column">
+            <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">
+                <option value="bidding.php">Bidding</option>
+                <option value="listing.php">Listing</option>
+                <?php if ($isAdmin): ?>
+                    <option value="maintenance.php">Maintenance</option>
+                    <option value="deleteItems.php" selected>Manage Auction</option>
+                <?php endif; ?>
+                <option value="history.php" selected>History</option>
+            </select>
+        </div>
+    </div>
+
+    <h2>My Bids</h2>
+
+    <?php
 
     $customerID = $_SESSION['customer_id'];
     $xmlFile = 'auction.xml';
@@ -81,5 +93,6 @@
         echo $output;
     }
     ?>
+    <a href="logout.php" style="text-decoration:none;"><button class="logout-button">Logout</button></a>
 </body>
 </html>

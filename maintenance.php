@@ -1,30 +1,18 @@
 <?php
 session_start();
 
-    // Check if the user is logged in and has an admin type
-    if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
-        // If not an admin, display an access denied message
-        echo '<!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Access Denied</title>
-            <link rel="stylesheet" type="text/css" href="style.css">
-        </head>
-        <body>
-            <div class="main-container">
-                <h2 style= "color:red;">Access Denied</h2>
-                <p>You do not have permission to view this page.<br><a href="login.html" class="bottom-link"> Login</a> to the system again to continue!</p>
-            </div>
-        </body>
-        </html>';
-        // Clear all session variables
-        session_unset();
+// Check if the user is logged in and has an admin type
+if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
+    // Include the access denied page
+    include('accessDenied.html');
+    
+    // Clear all session variables
+    session_unset();
 
-        // Destroy the session
-        session_destroy();
-        exit(); // Stop further execution of the script
-    }
+    // Destroy the session
+    session_destroy();
+    exit(); // Stop further execution of the script
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +20,29 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Maintenance Page</title>
+    <link rel="stylesheet" type="text/css" href="pagestyle.css">
     <script src="maintenance.js"></script>
 </head>
 <body>
+    <div class="navigation">
+        <div class="image-column">
+            <img src="shoponline.png" alt="ShopOnline Logo">
+        </div>
+        <div class="links-column">
+            <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">
+                <option value="bidding.php">Bidding</option>
+                <option value="listing.php">Listing</option>
+                <option value="maintenance.php" selected>Maintenance</option>
+                <option value="deleteItems.php">Manage Auction</option>
+                <option value="history.php">History</option>
+            </select>
+        </div>
+    </div>
     <h2>Maintenance Functions</h2>
     <button onclick="processItems()">Process Auction Items</button>
     <button onclick="generateReport()">Generate Report</button>
 
     <div id="result"></div>
+    <a href="logout.php" style="text-decoration:none;"><button class="logout-button">Logout</button></a>
 </body>
 </html>

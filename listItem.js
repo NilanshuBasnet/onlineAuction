@@ -17,7 +17,7 @@ function listItem() {
     
     // Validate days input
     if (isNaN(days) || days < 1) {
-        resultDiv.innerHTML = "Error: Please enter a valid number of days (greater than 0).";
+        resultDiv.innerHTML = "<p class='errormsg'>Error: Please enter a valid number of days (greater than 0).</p>";
         return; // Stop the function if validation fails
     }
 
