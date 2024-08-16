@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+  <customer>
+    <id>66bdc7a52c2a7</id>
+    <firstName>System</firstName>
+    <surname>Admin</surname>
+    <email>admin@shoponline.com</email>
+    <password>123456</password>
+  </customer>
+<customer><id>66becf9e8dc53</id><firstName>u2</firstName><surname>two</surname><email>u2@gmail.com</email><password>222</password></customer></customers>

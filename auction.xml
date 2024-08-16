@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item>
+        <customerID>101</customerID>
+        <itemID>1001</itemID>
+        <itemName>Apple iPhone 13</itemName>
+        <category>Electronics</category>
+        <description>New, sealed box</description>
+        <startingPrice>0</startingPrice>
+        <reservePrice>800</reservePrice>
+        <buyItNowPrice>1200</buyItNowPrice>
+        <bidPrice>1200</bidPrice>
+        <duration>2024-08-20 15:30:00</duration>
+        <status>sold</status>
+        <currentDate>2024-08-15</currentDate>
+        <currentTime>12:00:00</currentTime>
+        <bidderID>66bdc7a52c2a7</bidderID>
+    </item>
+    <item>
+        <customerID>103</customerID>
+        <itemID>1002</itemID>
+        <itemName>Samsung Galaxy S22</itemName>
+        <category>Electronics</category>
+        <description>Used, good condition</description>
+        <startingPrice>0</startingPrice>
+        <reservePrice>600</reservePrice>
+        <buyItNowPrice>900</buyItNowPrice>
+        <bidPrice>900</bidPrice>
+        <duration>2024-08-22 18:00:00</duration>
+        <status>sold</status>
+        <currentDate>2024-08-15</currentDate>
+        <currentTime>12:00:00</currentTime>
+        <bidderID>66bdc7a52c2a7</bidderID>
+    </item>
+    <item>
+        <customerID>105</customerID>
+        <itemID>1003</itemID>
+        <itemName>Nintendo Switch</itemName>
+        <category>Gaming</category>
+        <description>Brand new, in box</description>
+        <startingPrice>0</startingPrice>
+        <reservePrice>300</reservePrice>
+        <buyItNowPrice>450</buyItNowPrice>
+        <bidPrice>450</bidPrice>
+        <duration>2024-08-18 10:00:00</duration>
+        <status>sold</status>
+        <currentDate>2024-08-15</currentDate>
+        <currentTime>12:00:00</currentTime>
+        <bidderID>66bdc7a52c2a7</bidderID>
+    </item>
+    
+    <item>
+        <customerID>109</customerID>
+        <itemID>1005</itemID>
+        <itemName>Sony WH-1000XM4</itemName>
+        <category>Electronics</category>
+        <description>Noise-cancelling headphones</description>
+        <startingPrice>0</startingPrice>
+        <reservePrice>250</reservePrice>
+        <buyItNowPrice>350</buyItNowPrice>
+        <bidPrice>260</bidPrice>
+        <duration>2024-08-14 14:00:00</duration>
+        <status>failed</status>
+        <currentDate>2024-08-15</currentDate>
+        <currentTime>12:00:00</currentTime>
+        <bidderID>110</bidderID>
+    </item>
+<item><customerID>66bdc7a52c2a7</customerID><itemID>66bde1b91114f</itemID><itemName>Tes3</itemName><category>as</category><description>asd</description><startingPrice/><reservePrice>100</reservePrice><buyItNowPrice>200</buyItNowPrice><bidPrice>200</bidPrice><duration>2024-08-16 13:08:41</duration><status>sold</status><startDate>2024-08-15</startDate><startTime>13:08:41</startTime><bidderID>66bdc7a52c2a7</bidderID></item><item><customerID>66bdc7a52c2a7</customerID><itemID>66becaf80e289</itemID><itemName>Test4</itemName><category>Electronics</category><description>asd</description><startingPrice/><reservePrice>2300</reservePrice><buyItNowPrice>4000</buyItNowPrice><bidPrice>200</bidPrice><duration>2024-08-19 18:52:52</duration><status>in_progress</status><startDate>2024-08-16</startDate><startTime>05:43:52</startTime><bidderID>66bdc7a52c2a7</bidderID></item></items>

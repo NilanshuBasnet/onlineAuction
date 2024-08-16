@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="register.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <img src="shoponline.png" alt="ShopOnline Logo" class="title-image">
+        <form onsubmit="return registerUser()">
+            <input class="input" placeholder="First Name" type="text" id="firstName" name="firstName"><br><br>
+            <input class="input" placeholder="Surname" type="text" id="surname" name="surname"><br><br>
+            <input class="input" placeholder="Email" type="email" id="email" name="email"><br><br>
+            <input class="input" placeholder="Password" type="password" id="password" name="password"><br><br>
+            <input class="input" placeholder="Confirm Password" type="password" id="confirmPassword" name="confirmPassword"><br><br>
+            <input type="submit" class="action-button" value="Register">
+        </form>
+        <p class="bottom-text">Already registered? <a href="login.html" class="bottom-link">Login</a></p>
+        <br>
+        <div id="message"></div>
+    </div>
+</body>
+</html>
