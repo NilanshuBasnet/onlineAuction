@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Facilitates the "Buy It Now" option for auction items, allowing users to purchase items immediately without bidding.-->
+
 <?php
 session_start();
 

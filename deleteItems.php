@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Provides functionality for admins to delete auction items from the system.-->
+
 <?php
 session_start();
 

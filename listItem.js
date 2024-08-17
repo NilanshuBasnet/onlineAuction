@@ -1,3 +1,9 @@
+/*
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Handles the form submission for listing a new auction item, including category selection and input validation.
+*/
+
 function toggleOtherCategoryField() {
     var categorySelect = document.getElementById('category');
     var otherCategoryField = document.getElementById('otherCategoryField');

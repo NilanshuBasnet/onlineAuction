@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Generates reports based on auction data, such as sales or bidding statistics.-->
+
 <?php
 session_start();
 

@@ -1,3 +1,9 @@
+/*
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Contains functions for maintenance tasks such as processing auction items and generating reports.
+*/
+
 function processItems() {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "processItems.php", true);

@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Retrieves auction items from the XML file, typically used for displaying items on the listing page. -->
+
 <?php
 session_start();
 
@@ -25,7 +30,7 @@ foreach ($xml->item as $item) {
     } 
     elseif ($currentDate >= $endDate) {
         if ((string)$item->status === 'in_progress') {
-            // Update status to 'time expired' if auction duration has passed and it's still 'in_progress'
+            
             $item->status = 'in_progress';
             $xml->asXML($xmlFile);  // Save the XML file with the updated status
         }
@@ -42,7 +47,9 @@ foreach ($xml->item as $item) {
     $output .= '<p>Item ID: ' . $item->itemID . '</p>';
     $output .= '<p>Name: ' . $item->itemName . '</p>';
     $output .= '<p>Category: ' . $item->category . '</p>';
-    $output .= '<p>Description: ' . substr($item->description, 0, 30) . '</p>';
+    $description = $item->description;
+    $truncatedDescription = strlen($description) > 30 ? substr($description, 0, 30) . '...' : $description;
+    $output .= '<p>Description: ' . htmlspecialchars($truncatedDescription) . '</p>';
     $output .= '<p>Buy It Now Price: ' . $item->buyItNowPrice . '</p>';
     $output .= '<p>Current Bid: ' . $item->bidPrice . '</p>';
     $output .= '<p>Time Left: ' . $timeLeft . '</p>';  // Display time left or auction ended message

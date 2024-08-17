@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Displays the list of auction items available, typically fetching and showing items from the XML file. -->
+
 <?php
 session_start();
 if (!isset($_SESSION['customer_id'])) {
@@ -77,6 +82,7 @@ $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
             </select><br><br>
 
             <input class="action-button" type="button" value="List Item" onclick="listItem()">
+            <button class="action-button" type="reset">Reset</button>
         </form>
         <div id="result"></div>
     </div>

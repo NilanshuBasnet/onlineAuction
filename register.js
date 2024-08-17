@@ -1,3 +1,9 @@
+/*
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Manages user registration by sending registration details to the server and handling the server's response.
+*/
+
 var xhr;
 if (window.XMLHttpRequest) {
     xhr = new XMLHttpRequest();

@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Processes auction items to determine their final status based on bidding and reserve price.-->
+
 <?php
 session_start();
 

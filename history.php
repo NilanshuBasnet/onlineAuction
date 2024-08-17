@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Retrieves and displays a user's bidding history from the XML file.-->
+
 <?php
     session_start();
 

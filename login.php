@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Processes user login requests, verifying credentials and managing session variables. -->
+
 <?php
 session_start();
 

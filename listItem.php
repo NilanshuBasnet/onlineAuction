@@ -1,3 +1,8 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Handles the process of listing a new item for auction, including validation and XML file updates.-->
+
 <?php
 session_start();
 
@@ -126,7 +131,7 @@ function formatXmlString($xmlString) {
 function generateRandomItemID() {
     $capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $smallLetters = 'abcdefghijklmnopqrstuvwxyz';
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz' . $capitalLetters . '!@#$%^&*()_+-=';
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz' . $capitalLetters . '!@#$%^&*=';
     $charactersLength = strlen($characters);
 
     // Generate the first two characters: one capital letter and one small letter

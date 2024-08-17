@@ -1,3 +1,11 @@
+/*
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Processes user login requests, sending the login details to the server and handling the server's response.
+
+
+*/
+
 // Create XMLHttpRequest object
 var xhr;
 if (window.XMLHttpRequest) {

@@ -1,3 +1,7 @@
+<!-- 
+ Author: Nilanshu Basnet
+ StudentID: 104346575
+ Main Function: Processes bid submissions, updating the auction XML file with new bid details and handling validation checks.-->
 <?php
 session_start();
 
