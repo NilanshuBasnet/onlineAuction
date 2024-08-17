@@ -8,7 +8,7 @@ if (!isset($_SESSION['customer_id'])) {
 
 $itemID = $_POST['itemID'];
 $customerID = $_SESSION['customer_id'];
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 
 $xml = new DOMDocument();
 $xml->load($xmlFile);

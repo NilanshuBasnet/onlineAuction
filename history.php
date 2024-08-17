@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Bids</title>
-    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <link rel="stylesheet" type="text/css" href="style/pagestyle.css">
     <style>
         .error {
             color: red;
@@ -26,7 +26,7 @@
 <body>
     <div class="navigation">
         <div class="image-column">
-            <img src="shoponline.png" alt="ShopOnline Logo">
+            <img src="Asset/shoponline.png" alt="ShopOnline Logo">
         </div>
         <div class="links-column">
             <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">
@@ -46,7 +46,7 @@
     <?php
 
     $customerID = $_SESSION['customer_id'];
-    $xmlFile = 'auction.xml';
+    $xmlFile = '../data/auction.xml';
 
     // Check if the XML file exists
     if (!file_exists($xmlFile)) {

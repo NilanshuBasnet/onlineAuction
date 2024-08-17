@@ -7,7 +7,7 @@ $surname = $_POST['surname'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$xmlFile = 'customers.xml';
+$xmlFile = '../data/customers.xml';
 
 // Check if the XML file exists
 if (!file_exists($xmlFile)) {
@@ -18,6 +18,7 @@ if (!file_exists($xmlFile)) {
 } else {
     $xml = new DOMDocument();
     $xml->load($xmlFile);
+    
 }
 
 $xpath = new DOMXPath($xml);
@@ -47,8 +48,14 @@ if ($existingCustomer->length > 0) {
     $customer->appendChild($passwordElement);
 
     $xml->getElementsByTagName('customers')->item(0)->appendChild($customer);
-    $xml->formatOutput = true;  // Format the output with indentation and new lines
-    $xml->save($xmlFile);
+    
+    
+    // Manually format the XML string
+    $xmlContent = $xml->saveXML();
+    $formattedXmlContent = formatXmlString($xmlContent);
+    
+    // Save the formatted XML string to the file
+    file_put_contents($xmlFile, $formattedXmlContent);
 
     $_SESSION['customer_id'] = $customerId;
     $_SESSION['first_name'] = $firstName;
@@ -56,8 +63,36 @@ if ($existingCustomer->length > 0) {
     $_SESSION['email'] = $email;
     $_SESSION['user_type'] = 'customer';
 
-    echo "Registration successful!";
+    //Remove or comment out this part when sending email
+    $_SESSION['message'] = 'Registration successful!'; //I have included this and commented the email sending part as it was making the page slow
+   
+   /*  // Prepare email
+    $to = $email;
+    $subject = "Welcome to ShopOnline!";
+    $message = "Dear $firstName,\n\nWelcome to use ShopOnline! Your customer id is $customerId and the password is $password.\n";
+    $headers = "From: registration@shoponline.com.au\r\n";
+    $headers .= "Reply-To: registration@shoponline.com.au\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+
+    // Send email
+    if (mail($to, $subject, $message, $headers)) {
+        $_SESSION['message'] = "Registration Successful! Login Details sent to your email address";
+    } else {
+        $_SESSION['message'] = "Registration Successful! Email not sent from XAMPP.";
+    }*/
+
+    echo $_SESSION['message'];
 }
+
+
+function formatXmlString($xmlString) {
+    $dom = new DOMDocument();
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->loadXML($xmlString);
+    return $dom->saveXML();
+}
+
 
 // Function to generate a unique customer ID of 5 characters with letters, numbers, and symbols
 function generateUniqueID($xml) {
@@ -83,7 +118,7 @@ function generateUniqueID($xml) {
 
 // Function to generate a random string of specified length
 function generateRandomString($length) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=';
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$';
     $charactersLength = strlen($characters);
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {

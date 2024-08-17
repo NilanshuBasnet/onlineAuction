@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
 $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
 
 // Define the path to the XML file
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 
 // Initialize variables for search results
 $itemsFound = false;
@@ -88,7 +88,7 @@ if (!file_exists($xmlFile)) {
 <head>
     <meta charset="UTF-8">
     <title>Display Items</title>
-    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <link rel="stylesheet" type="text/css" href="style/pagestyle.css">
 </head>
 <body>
     <div class="navigation">

@@ -13,12 +13,12 @@ function registerUser() {
     var confirmPassword = document.getElementById("confirmPassword").value;
 
     if (firstName === "" || surname === "" || email === "" || password === "" || confirmPassword === "") {
-        document.getElementById("message").innerHTML = "All fields are required.";
+        document.getElementById("message").innerHTML = "<p class='errormsg'>All fields are required.</p>";
         return false;
     }
 
     if (password !== confirmPassword) {
-        document.getElementById("message").innerHTML = "Passwords do not match.";
+        document.getElementById("message").innerHTML = "<p class='errormsg'>Passwords do not match.</p>";
         return false;
     }
 

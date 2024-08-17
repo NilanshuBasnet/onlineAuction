@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
     exit(); // Stop further execution of the script
 }
 
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 $xml = simplexml_load_file($xmlFile);
 
 $soldItems = [];

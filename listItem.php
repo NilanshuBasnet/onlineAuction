@@ -12,7 +12,7 @@ function constructDuration($days, $hours, $minutes) {
 date_default_timezone_set('Australia/Sydney');
 
 // Load the auction XML file or create a new one if it doesn't exist
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 if (!file_exists($xmlFile)) {
     $xml = new DOMDocument('1.0', 'UTF-8');
     $xml->formatOutput = true;
@@ -81,7 +81,13 @@ $itemElement->appendChild($xml->createElement('startTime', $currentTime));
 $itemElement->appendChild($xml->createElement('bidderID', 'None'));
 
 $itemsElement->appendChild($itemElement);
-$xml->save($xmlFile);
+
+// Manually format the XML string
+$xmlContent = $xml->saveXML();
+$formattedXmlContent = formatXmlString($xmlContent);
+
+// Save the formatted XML string to the file
+file_put_contents($xmlFile, $formattedXmlContent);
 
 // Return the item number, date, and time
 echo "<p class='successmsg'>Thank you! Your item has been listed in ShopOnline. The item number is <b>$itemID</b>, and the bidding starts now: <b>$currentTime</b> on <b>$currentDate</b>.</p>";
@@ -106,6 +112,14 @@ function generateUniqueItemID($xml) {
     }
 
     return $uniqueID;
+}
+
+function formatXmlString($xmlString) {
+    $dom = new DOMDocument();
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->loadXML($xmlString);
+    return $dom->saveXML();
 }
 
 // Function to generate a random itemID of 6 characters

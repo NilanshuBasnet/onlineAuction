@@ -14,7 +14,7 @@ $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
 <head>
     <meta charset="UTF-8">
     <title>List Item for Auction</title>
-    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <link rel="stylesheet" type="text/css" href="style/pagestyle.css">
     <style>
         #otherCategoryField {
             display: none;
@@ -24,7 +24,7 @@ $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
 <body>
     <div class="navigation">
         <div class="image-column">
-            <img src="shoponline.png" alt="ShopOnline Logo">
+            <img src="Asset/shoponline.png" alt="ShopOnline Logo">
         </div>
         <div class="links-column">
             <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">
@@ -32,7 +32,7 @@ $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
                 <option value="listing.php"selected>Listing</option>
                 <?php if ($isAdmin): ?>
                     <option value="maintenance.php">Maintenance</option>
-                    <option value="deleteItems.php" selected>Manage Auction</option>
+                    <option value="deleteItems.php">Manage Auction</option>
                 <?php endif; ?>
                 <option value="history.php">History</option>
             </select>

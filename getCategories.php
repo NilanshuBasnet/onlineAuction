@@ -1,5 +1,5 @@
 <?php
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 $categories = [];
 
 if (file_exists($xmlFile)) {

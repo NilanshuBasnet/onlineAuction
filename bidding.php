@@ -18,20 +18,20 @@ $isAdmin = isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin';
 <head>
     <meta charset="UTF-8">
     <title>Bidding Page</title>
-    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <link rel="stylesheet" type="text/css" href="style/pagestyle.css">
     <script src="bidding.js"></script>
 </head>
 <body>
     <?php
     // Display the message if it exists
     if (isset($_SESSION['message'])) {
-        echo '<p>' . $_SESSION['message'] . '</p>';
+        echo '<div class="registrationSuccess"><p>' . $_SESSION['message'] . '</p></div>';
         unset($_SESSION['message']); // Clear the message after displaying
     }
     ?>
     <div class="navigation">
     <div class="image-column">
-        <img src="shoponline.png" alt="ShopOnline Logo">
+        <img src="Asset/shoponline.png" alt="ShopOnline Logo">
     </div>
     <div class="links-column">
         <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">

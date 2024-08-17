@@ -20,13 +20,13 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <title>Maintenance Page</title>
-    <link rel="stylesheet" type="text/css" href="pagestyle.css">
+    <link rel="stylesheet" type="text/css" href="style/pagestyle.css">
     <script src="maintenance.js"></script>
 </head>
 <body>
     <div class="navigation">
         <div class="image-column">
-            <img src="shoponline.png" alt="ShopOnline Logo">
+            <img src="Asset/shoponline.png" alt="ShopOnline Logo">
         </div>
         <div class="links-column">
             <select class="menu" name="shoppages" id="shoppages" onchange="location = this.value;">

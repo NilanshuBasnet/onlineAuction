@@ -3,7 +3,7 @@ session_start();
 
 $email = $_POST['email'];
 $password = $_POST['password'];
-$xml = simplexml_load_file('customers.xml');
+$xml = simplexml_load_file('../data/customers.xml');
 
 // Find the customer with the provided email
 $customer = null;

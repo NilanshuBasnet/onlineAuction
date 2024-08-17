@@ -1,3 +1,6 @@
+// Load items immediately
+loadItems();
+
 // Load items every 5 seconds
 setInterval(loadItems, 5000);
 

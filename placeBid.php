@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$xmlFile = 'auction.xml';
+$xmlFile = '../data/auction.xml';
 $xml = simplexml_load_file($xmlFile);
 
 $itemID = $_POST['itemID'];

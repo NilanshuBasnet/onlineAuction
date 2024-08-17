@@ -1,10 +1,14 @@
 <?php
 session_start();
 
-$xmlFile = 'auction.xml';
+// Set the default timezone to Sydney, Australia
+date_default_timezone_set('Australia/Sydney');
+
+$xmlFile = '../data/auction.xml';
 $xml = simplexml_load_file($xmlFile);
 
-$currentDate = new DateTime();
+$todayDate = date('Y-m-d H:i:s');
+$currentDate = new DateTime($todayDate);
 $output = '';
 
 foreach ($xml->item as $item) {
@@ -14,7 +18,12 @@ foreach ($xml->item as $item) {
     if ((string)$item->status === 'sold') {
         $status = 'Sold';
         $timeLeft = 'Auction Ended';
-    } elseif ($currentDate >= $endDate) {
+    }
+    elseif((string)$item->status === 'failed') {
+        $status = 'Failed';
+        $timeLeft = 'Time Expired';
+    } 
+    elseif ($currentDate >= $endDate) {
         if ((string)$item->status === 'in_progress') {
             // Update status to 'time expired' if auction duration has passed and it's still 'in_progress'
             $item->status = 'in_progress';
