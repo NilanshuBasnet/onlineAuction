@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Ends the user's session and redirects them to the login page.-->
- 
 <?php
+/**
+ * Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Ends the user's session and redirects them to the login page.
+ */
 session_start(); // Start the session
 
 // Clear all session variables

@@ -1,11 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!-- 
  Author: Nilanshu Basnet
  StudentID: 104346575
  Main Function: The XSLT stylesheet transforms XML data into an HTML report that displays a summary of auction results, 
  including tables of sold items and failed items with relevant details, as well as the total revenue generated from sold 
  items. -->
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
         <html>
         <body>

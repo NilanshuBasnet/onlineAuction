@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Retrieves auction items from the XML file, typically used for displaying items on the listing page. -->
-
 <?php
+/**
+ *  Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Retrieves auction items from the XML file, typically used for displaying items on the listing page.
+ */
 session_start();
 
 // Set the default timezone to Sydney, Australia

@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Handles the submission of bids for auction items, updating the item details and bid information.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Handles the submission of bids for auction items, updating the item details and bid information.
+ */
 session_start();
 
 $xmlFile = '../data/auction.xml';

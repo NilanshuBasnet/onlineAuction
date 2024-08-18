@@ -1,10 +1,11 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Processes user login requests, verifying credentials and managing session variables. -->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+*StudentID: 104346575
+*Main Function: Processes user login requests, verifying credentials and managing session variables.
+*/ 
 session_start();
+
 
 $email = $_POST['email'];
 $password = $_POST['password'];

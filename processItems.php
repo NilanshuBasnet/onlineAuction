@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Processes auction items to determine their final status based on bidding and reserve price.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Processes auction items to determine their final status based on bidding and reserve price.
+ */
 session_start();
 
 // Check if the user is logged in and has an admin type

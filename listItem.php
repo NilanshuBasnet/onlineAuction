@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Handles the process of listing a new item for auction, including validation and XML file updates.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Handles the process of listing a new item for auction, including validation and XML file updates.
+ */
 session_start();
 
 function constructDuration($days, $hours, $minutes) {

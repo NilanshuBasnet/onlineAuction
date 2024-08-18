@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Provides admin functionality for maintaining the system, such as processing auction items and generating reports.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Provides admin functionality for maintaining the system, such as processing auction items and generating reports.
+ */
 session_start();
 
 // Check if the user is logged in and has an admin type

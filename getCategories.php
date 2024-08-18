@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Returns a list of auction categories from the XML file in JSON format, used for populating category dropdowns.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Returns a list of auction categories from the XML file in JSON format, used for populating category dropdowns.-->
+ */
 $xmlFile = '../data/auction.xml';
 $categories = [];
 

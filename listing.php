@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function: Displays the list of auction items available, typically fetching and showing items from the XML file. -->
-
 <?php
+/**
+ *  Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function: Displays the list of auction items available, typically fetching and showing items from the XML file. -->
+ */
 session_start();
 if (!isset($_SESSION['customer_id'])) {
     header("Location: login.html");

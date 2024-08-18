@@ -1,9 +1,9 @@
-<!-- 
- Author: Nilanshu Basnet
- StudentID: 104346575
- Main Function:  Manages user registration, including adding new users to the XML file and handling session setup.-->
-
 <?php
+/**
+ *Author: Nilanshu Basnet
+ *StudentID: 104346575
+ *Main Function:  Manages user registration, including adding new users to the XML file and handling session setup.
+ */
 session_start();
 header("Content-Type: text/plain");
 
